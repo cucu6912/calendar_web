@@ -1,0 +1,77 @@
+:root {
+    --white : #fff;
+    --main : #eaedf0;
+    --accent : #0041ff;
+    --accent-2 : #ebedf0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: start;
+    padding-top: 100px;
+    background: var(--main);
+}
+
+.container {
+    background: var(--white);
+    border-radius: 25px;
+    padding: 0 1em;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    color: var(--accent);
+    pre {
+        padding: 10px;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+}
+
+.header-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    word-spacing: 0.5rem;
+}
+
+.days,
+.week {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    padding: 0 20px;
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        height: 3rem;
+        opacity: 0.5;
+    }
+}
+.days div{
+    border-radius: 50%;
+    opacity: 1;
+    &:hover {
+        background: var(--accent-2);
+        color: rgb(25,25,201);
+        cursor: pointer;
+    }
+}
+
+.display-selected {
+    margin-top: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+.current-date {
+    background: var(--accent);
+    color: var(--white);
+}
